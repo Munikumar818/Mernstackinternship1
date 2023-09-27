@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Animation</title>
+  <style>
+    #animationContainer {
+      width: 300px;
+      height: 300px;
+      position: relative;
+    }
+
+    #animatedImage {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+    
+  <div id="animationContainer" align="center">
+    <img id="animatedImage" img src="data:image/png;base64,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"        alt="Your Image">
+  </div>
+<p align="center" style="color:blue;">Click the following buttons to handle animation</p>
+  <div align="center">
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+  </div>
+
+  <script>
+    let animationId;
+    const animatedImage = document.getElementById("animatedImage");
+    const startButton = document.getElementById("startButton");
+    const stopButton = document.getElementById("stopButton");
+
+    let position = 0; 
+
+    function animate() {
+      position += 2; 
+      animatedImage.style.left = `${position}px`;
+
+      
+      animationId = requestAnimationFrame(animate);
+    }
+
+    startButton.addEventListener("click", () => {
+      
+      animatedImage.src = "data:image/png;base64,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"; 
+      animationId = requestAnimationFrame(animate);
+    });
+
+    stopButton.addEventListener("click", () => {
+      cancelAnimationFrame(animationId);
+    });
+  </script>
+</body>
+</html>
